@@ -1,0 +1,281 @@
+body{
+    overflow: hidden;
+}
+
+a {
+    /*color:inherit;*/
+    color: #eeeecc;
+    text-decoration:none;
+    line-height:25px;
+    opacity: 0;
+    transition-delay: 0.5s;                      /*text fade in timer*/
+    transition: all 2s ease, text-shadow 4s ease-out;           /*text-shadow fade out*/
+}
+
+
+a:hover {
+    /*animation: neon6 1s ease-in-out infinite alternate;*/      /*neon glow animation*/
+    text-shadow: 0 0 7px  #fff, 0 0 14px #fff, 0 0 21px #fff, 0 0 28px #ff598d, 0 0 49px #ff598d, 0 0 56px #ff598d, 0 0 70px  #ff598d, 0 0 105px #ff598d;
+    transition: text-shadow 0.25s ease;                     /*text-shadow fade in*/
+    /*color: #F7155C;*/
+    color: #f7b9cc !important;
+}
+
+
+#bgimg {
+    z-index:-10;
+    position:fixed;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+
+#container {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    display:table;
+}
+
+#cell {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+
+
+.sqr {
+    display:inline-block;
+    width:240px;                                        /*width and height here*/
+    height:330px;
+    margin:3px 1px;
+    overflow:hidden;
+    transition:all .30s ease-in-out;                    /*related to square opening time*/
+    vertical-align:middle;
+    opacity: 0.62;                                /*non focused square opacity*/
+}
+
+
+.sqr:hover a {
+    opacity: 1;
+}
+
+
+.content {
+    margin:0 10px 0;
+    line-height:32px;                                   /*space between lines*/
+    margin-top: -35px;                                  /*use this to adjust links position*/
+}
+
+
+span {
+    width:inherit;
+    height:inherit;
+    line-height:330px;                                  /*adjust titles and links position (should be the same as square heigth)*/
+    text-transform:uppercase;
+}
+
+
+#searchinput:focus {                                    /*when search box is selected*/
+    opacity: 1;
+    transition: all 1.35 ease;
+    transition-delay: 0.35s;
+    width:46%;                                          /*percentage relative to window size*/
+    position: absolute;
+    margin-left: -23%;                                  /*margin-left= -(width/2)% */
+}
+
+
+#search_sqr:hover #searchinput {
+    opacity: 1;
+    transition: all 1.35s ease;
+    transition-delay: 0.35s;
+    width:46%;                                          /*percentage relative to window size*/
+    position: absolute;
+    margin-left: -23%;                                  /*margin-left= -(width/2)% */
+}
+
+
+
+input {
+    margin-right: -23%;
+}
+
+
+#searchinput {
+    width:235px;                                        /*width of search box*/
+    height:30px;
+    margin-left:-120px;
+    margin-top: -105px;                                 /*adjust search box position (content margin + searchinput margin = 100)*/
+    border:none;
+    text-align:center;                                  /*delete this to not center align text in the search box*/
+    position:absolute;
+    opacity:0;
+    transition:all 0.3s ease;
+    transition-delay:0s;
+    z-index:1;                                         /*put searchbox in front of all squares*/
+}
+
+
+#banner {
+    position:absolute;
+    width:340px;    /*350*/
+    left:calc(50% - 170px);                           /*50% - (width / 2)*/
+    bottom:calc(74% - 5px);                           /* x% - adjustement*/
+    z-index: -1;
+    transition:all 0.3s ease;
+    transition-delay:0.2s;
+}
+
+
+@media (max-width: 1270px){                           /*hide banner when browser width is smaller than max-width*/
+    #banner{
+        display: none;
+    }
+}
+
+
+#popup {
+    position:absolute;
+    z-index:100;
+    bottom:-200px;
+    right:15px;
+    padding:25px;
+    transition:all .25s ease-in-out;
+    text-align:left;
+}
+
+
+/*glow*/
+
+/*
+@keyframes neon6 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff598d, 0 0 70px #ff598d, 0 0 80px #ff598d, 0 0 100px #ff598d, 0 0 150px #ff598d;
+  }
+  to {
+    text-shadow: 0 0 5px  #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff598d, 0 0 35px #ff598d, 0 0 40px #ff598d, 0 0 50px  #ff598d, 0 0 75px  #ff598d;
+  }
+}
+*/
+
+/* CONFIGMENU */
+
+#configmenu_container {
+    position:absolute;
+    display:none;
+    z-index:120;
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    padding:110px;
+
+    background-color:rgba(255,255,255,0.2);
+    box-sizing:border-box;
+}
+#configmenu_container *:not(.wrapperheading):not(#heading) {
+    box-sizing:border-box;
+    font-family:Arial;
+    font-size:14px;
+}
+
+#configmenu {
+    width:100%;
+    height:100%;
+
+    background-color:#fff;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+#heading {
+    line-height:40px;
+    font-size:20px;
+    padding-left:10px;
+
+    background-color:#f0f0f0;
+}
+
+#content {
+    height:calc(100% - 40px);
+    overflow-y: auto;
+}
+
+.option {
+    display:inline-block;
+    width:100%;
+    height:25px;
+
+    line-height:25px;
+    padding-left:40px;
+}
+#boolwrapper .option {
+    width:50%;
+}
+
+#boolwrapper input[type="checkbox"] {
+    margin:4px 20px 0 0;
+    float:left;
+}
+#configmenu input[type="text"] {
+    width:60%;
+    margin:4px 40px 0 0;
+    padding:0 0 0 5px;
+    border-radius:0;
+    border:none;
+    background-color:#dfdfdf;
+    float:right;
+}
+
+
+#boolwrapper {
+    margin:40px 0;
+}
+#stylewrapper {
+    margin:40px 0;
+}
+#extwrapper {
+    margin:40px 0;
+}
+
+.wrapperheading {
+    display:inline-block;
+    margin-left:40px;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.button {
+    width:40px;
+    height:40px;
+
+    float:right;
+
+    line-height:40px;
+    text-align:center;
+}
+.button:hover {
+    opacity:0.7;
+}
+
+#import {
+    background-image:url("../img/import.png");
+    background-color:#bb9999;
+}
+#importinput {
+    display:none;
+}
+
+#export {
+    background-image:url("../img/export.png");
+    background-color:#9999bb;
+}
+
+#done {
+    background-image:url("../img/done.png");
+    background-color:#99bb99;
+}

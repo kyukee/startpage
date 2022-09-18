@@ -1,0 +1,34 @@
+{
+    "bool": {
+        "borders":              true,
+        "alwaysopen":           false,
+        "mascot":               false,
+        "allowVersionCheck":    true
+    },
+    
+    "style": {
+        "heading_font":         "Terminus",
+        "link_font":            "Terminus",
+        "heading_font_size":    "50px",
+        "link_font_size":       "26px",
+        "background":           "#211b1c",
+        "foreground":           "#302728",
+        "heading_color":        "#F7155C",
+        "link_color":           "#EEEECC",
+        "border_color":         "#8d2036",      
+        "border_width":         "4px",
+        "search_color":         "#eeeecc",
+        "search_bg_color":      "#302728"
+    },
+    
+    "ext": {
+        "images":[              "image1.png",
+                                "image2.png",
+                                "image3.png"],
+        "bottom":               "0",
+        "right":                "0",
+        "height":               "500px",
+        "width":                "400px",
+        "opacity":              ".2"
+    }
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>startpage</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/configmenu.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div id="bgimg"></div>                                       <!-- background-size: ( width heigth)-->
+    <div id="container">                                         <!-- dimensions can be x % or x px-->
+      <div id="cell">
+        <div class="sqr" style=" background-size: 500% 980px; background-position: -00px 0px; background-image: url('img/home/wallhaven-184279.png');">
+          <span>boards</span>
+          <div class="content">
+            <a href="http://boards.4chan.org/a/">/a/</a><br>
+            <a href="http://boards.4chan.org/c/">/c/</a><br>
+            <a href="http://boards.4chan.org/k/">/k/</a><br>
+            <a href="https://boards.4chan.org/pol/">/pol/</a><br>
+            <a href="http://boards.4chan.org/wsg/">/wsg/</a><br>
+            <a href="http://boards.4chan.org/g/">/g/</a>
+          </div>
+        </div>
+        <div class="sqr" style=" background-size: 500% 980px; background-position: -435px 0px; background-image: url('img/home/012-4Ld2Sst.png');">
+          <span>media</span>
+          <div class="content">
+            <a href="https://www.youtube.com/feed/subscriptions">Youtube</a><br>
+            <a href="http://www.twitch.tv/directory">Twitch</a><br>
+            <a href="http://www.facebook.com">Facebook</a><br>
+            <br>
+            <a href="http://yande.re">yande.re</a><br>
+            <a href="http://www.konachan.com">konachan</a><br>
+            <a href="http://danbooru.donmai.us">danbooru</a><br>
+            <br>
+            <a href="https://torrents-csv.ml/#/">Torrent</a><br>
+            <a href="http://127.0.0.1:43110/kaffiene.bit/">ZeroNet</a>
+          </div>
+        </div>
+        <div class="sqr" id="sqr_center_left" style=" background-size: 500% 980px; background-position: -750px 0px; background-image: url('img/home/wallhaven-184279.png');">
+          <span>anime</span>
+          <div class="content">
+            <a href="https://www.livechart.me">LiveChart</a><br>
+            <a href="https://anichart.net">AniChart</a><br>
+            <br>
+            <a href="https://anilist.co">AniList</a><br>
+            <a href="https://anidb.net">AniDB</a><br>
+            <a href="https://myanimelist.net">MyAnimeList</a><br>
+            <br>
+            <a href="https://anime.plus/">anime.plus</a><br>
+            <br>
+            <a href="https://www.mangaupdates.com/">Baka-Updates</a><br>
+            <a href="https://mangadex.org/">Mangadex</a><br>
+            <a href="https://www.anime-planet.com/manga/all">Anime Planet</a><br>
+            <br>
+            <a href="http://nyaa.si">nyaa</a><br>
+            <a href="http://9anime.to">9anime</a><br>
+            <a href="http://kissanime.com">KissAnime</a>
+          </div>
+        </div>
+        <div class="sqr" id="search_sqr" style=" background-size: 500% 980px; background-position: -255px 0px; background-image: url('img/home/154-NFBtXqh.png');">
+          <span>search</span>
+          <div class="content">
+            <input id="searchinput" type="text" autocomplete="off" placeholder="Search.. (-h for help)">
+          </div>
+        </div>
+        <div class="sqr" id="sqr_center_right" style=" background-size: 500% 980px; background-position: -385px 0px; background-image: url('img/home/004-LMIoRc7.png');">
+          <span>git</span>
+          <div class="content">
+            <a href="https://github.com">GitHub</a><br>
+            <a href="https://bitbucket.org">Bitbucket</a><br>
+            <a href="https://gitlab.com/">Gitlab</a><br>
+          </div>
+        </div>
+        <div class="sqr" style=" background-size: 500% 980px; background-position: -340px 0px; background-image: url('img/home/010-tlxaS7H.png');">
+          <span>social</span>
+          <div class="content">
+            <a href="https://mail.google.com">Gmail</a><br>
+            <a href="https://outlook.live.com">Hotmail</a><br>
+            <a href="https://web.telegram.org">Telegram</a><br>
+            <a href="https://web.whatsapp.com">WhatsApp</a><br>
+            <a href="https://www.messenger.com">FB Messenger</a><br>
+            <a href="https://www.inoreader.com">RSS Feeds</a><br>
+            <a href="https://discord.com">Discord</a><br>
+            <a href="https://cavcma.slack.com/">Slack CAVCMA</a><br>
+          </div>
+        </div>
+        <div class="sqr" style=" background-size: 500% 980px; background-position: -900px 0px; background-image: url('img/home/004-LMIoRc7.png');">
+          <span>work</span>
+          <div class="content">
+            <a href="https://id.tecnico.ulisboa.pt/cas/login">Fenix Login</a><br>
+            <br>
+            <a href="https://fenix.tecnico.ulisboa.pt/disciplinas/DMEICom2646/2020-2021/2-semestre">Thesis</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img id="banner">
+    <div id="popup"></div>
+    <div id="configmenu_container">
+      <div id="configmenu">
+        <div id="heading">
+          Config-Menu
+          <div id="done" class="button"></div>
+          <div id="export" class="button"></div>
+          <div id="import" class="button"></div>
+          <input id="importinput" type="file" name="importinput">
+        </div>
+        <div id="content">
+          <div id="boolwrapper">
+          </div>
+          <div id="stylewrapper">
+            <div class="wrapperheading">General</div>
+          </div>
+          <div id="extwrapper">
+            <label>
+              <div class="wrapperheading">Mascot</div>
+              <input id="mcb" type="checkbox" name="mascot">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
